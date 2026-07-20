@@ -449,30 +449,8 @@ SCORE_W_UNDER   = 1.0   (peso sottostima)
 
 **Implementata in:** `get_exact_competition_score()` — usata come funzione obiettivo diretta in Nelder-Mead.
 
----
 
-## 7. Evoluzione dello Score
-
-| Iterazione | Notebook / Step | Innovazione introdotta | Score |
-|---|---|---|---|
-| 1 | `phm_rul_prediction` v1 | Feature fisiche Brayton; 3 modelli separati | 219 |
-| 2 | `phm_rul_prediction` v2 | Bug fix normalizzazione θ/δ; armonizzazione colonne | 190.4 |
-| 3 | `phm_rul_prediction` v3 | Feature `_trend` (differenza a 5 passi) | 167.9 |
-| 4 | `phm_rul_prediction` v4 | Feature `_std` rolling std — 25 feat mech / 71 WW | 140.0 |
-| 5 | `phm_rul_prediction` v5 | **OOF Margin Optimization** con Nelder-Mead | 78.26 |
-| 6 | `phm_rul_prediction` v6 | **Effetto Domino** WW→HPC→HPT (stacking) | **71 ✓** |
-| 7 | `phm_refactor_post_fix` | Refactoring completo, comportamento invariato | 71 |
-
-```
-219 → 190.4 → 167.9 → 140.0 → 78.26 → 71
- ▲       ▲       ▲       ▲       ▲      ▲
-Bug fix Trend  Volatil. OOF   Domino
-        feat.  feat.    Opt.
-```
-
----
-
-## 9. Come Riprodurre i Risultati
+## 7. Come Riprodurre i Risultati
 
 ### Prerequisiti
 
@@ -517,7 +495,7 @@ risultati/submission_final.csv         ← predizioni test (submission ufficiale
 
 ---
 
-## 10. Autori
+## 8. Autori
 
 **Balloni Niccolò** **Concetti Francesco** **Giannetti Lorenzo**  
 Progetto universitario per il corso di Manutenzione Preventiva per la Robotica e l'Automazione Intelligente— A.A. 2025/2026  
